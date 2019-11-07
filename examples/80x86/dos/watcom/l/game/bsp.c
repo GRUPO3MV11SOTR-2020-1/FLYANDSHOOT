@@ -37,15 +37,28 @@
 #include "bsp.h"
 #include "video.h"
 
+#ifndef LMC_TEST_2020_1
 #include <dos.h>                       /* for _dos_setvect()/_dos_getvect() */
 #include <conio.h>                                      /* for inp()/outp() */
+#else
+typedef void (*ISR_fn)();
+ISR_fn _dos_getvect(unsigned int);
+ISR_fn _dos_setvect(unsigned int,void (*)());
+#define inp	inb
+#define outp	outb
+#endif /*LMC_TEST_2020_1*/
 #include <stdlib.h>                                          /* for _exit() */
 
 Q_DEFINE_THIS_FILE
 
 /* Local-scope objects -----------------------------------------------------*/
+#ifndef LMC_TEST_2020_1
 static void interrupt (*l_dosTmrISR)();
 static void interrupt (*l_dosKbdISR)();
+#else
+static void (*l_dosTmrISR)();
+static void (*l_dosKbdISR)();
+#endif /*LMC_TEST_2020_1*/
 
 #ifdef Q_SPY
     static uint16_t l_uart_base;        /* QS data uplink UART base address */
@@ -60,6 +73,7 @@ static void interrupt (*l_dosKbdISR)();
 #define KBD_VECTOR      0x09
 
 /*..........................................................................*/
+#ifndef LMC_TEST_2020_1
 static void interrupt ISR_tmr() {
     static QEvt const tickEvt = { TIME_TICK_SIG, 0, 0 };
 
@@ -74,7 +88,24 @@ static void interrupt ISR_tmr() {
 
     QF_ISR_EXIT();                                  /* QF-specific ISR exit */
 }
+#else
+static void ISR_tmr() {
+    static QEvt const tickEvt = { TIME_TICK_SIG, 0, 0 };
+
+    QF_ISR_ENTRY();                                /* QF-specific ISR entry */
+
+    QF_TICK(&l_tmr);          /* call QF_tick() outside of critical section */
+    QF_PUBLISH(&tickEvt, &l_tmr);                 /* publish the tick event */
+
+#ifdef Q_SPY
+    l_tickTime += 0x10000;
+#endif
+
+    QF_ISR_EXIT();                                  /* QF-specific ISR exit */
+}
+#endif /*LMC_TEST_2020_1*/
 /*..........................................................................*/
+#ifndef LMC_TEST_2020_1
 static void interrupt ISR_kbd() {
     static uint8_t ship_pos = GAME_SHIP_Y;
     uint8_t key;
@@ -122,6 +153,55 @@ static void interrupt ISR_kbd() {
 
     QF_ISR_EXIT();                                  /* QF-specific ISR exit */
 }
+#else
+static void ISR_kbd() {
+    static uint8_t ship_pos = GAME_SHIP_Y;
+    uint8_t key;
+    uint8_t kcr;
+
+    QF_ISR_ENTRY();                                /* QF-specific ISR entry */
+
+    key = inp(0x60);              /* key scan code from 8042 kbd controller */
+    kcr = inp(0x61);                       /* get keyboard control register */
+    outp(0x61, (uint8_t)(kcr | 0x80));       /* toggle acknowledge bit high */
+    outp(0x61, kcr);                          /* toggle acknowledge bit low */
+
+    switch (key) {
+        case 200:                                               /* Up-arrow */
+        case 208: {                                           /* Down-arrow */
+            ObjectPosEvt *ope = Q_NEW(ObjectPosEvt, PLAYER_SHIP_MOVE_SIG);
+            if ((key == (uint8_t)200) && (ship_pos > 0x00)) {
+                --ship_pos;
+            }
+            else if ((key == (uint8_t)208)
+                     && (ship_pos < (GAME_SCREEN_HEIGHT - 3))) {
+                ++ship_pos;
+            }
+            ope->x = (uint8_t)GAME_SHIP_X;           /* x-position is fixed */
+            ope->y = (uint8_t)ship_pos;
+            QACTIVE_POST(AO_Ship, (QEvt *)ope, &l_kbd);    /* to the ship */
+
+            Video_printNumAt(24, 24, VIDEO_FGND_YELLOW, ship_pos);
+            break;
+        }
+        case 57: {                                                 /* Space */
+            static uint16_t ntrig = 0;
+            static QEvt const fireEvt = { PLAYER_TRIGGER_SIG, 0, 0 };
+            QF_PUBLISH(&fireEvt, &l_kbd);
+
+            Video_printNumAt(47, 24, VIDEO_FGND_YELLOW, ++ntrig);
+            break;
+        }                                                            /* Esc */
+        case 129: {
+            static QEvt const quitEvt = { PLAYER_QUIT_SIG, 0, 0 };
+            QF_PUBLISH(&quitEvt, &l_kbd);
+            break;
+        }
+    }
+
+    QF_ISR_EXIT();                                  /* QF-specific ISR exit */
+}
+#endif /*LMC_TEST_2020_1*/
 /*..........................................................................*/
 void BSP_init(int argc, char *argv[]) {
     char const *com = "COM1";
@@ -220,7 +300,11 @@ void QF_onCleanup(void) {
     QF_INT_ENABLE();
 
     QS_EXIT();                                                   /* exit QS */
+#ifndef LMC_TEST_2020_1
     _exit(0);                                                /* exit to DOS */
+#else
+    exit(0);
+#endif /*LMC_TEST_2020_1*/
 }
 /*..........................................................................*/
 void QF_onIdle(void) {

@@ -1,0 +1,852 @@
+Script started on Wed 06 Nov 2019 05:20:17 PM CST
+]0;usuario@DESKTOP-9EAUVS9: ~/ORGANIZACION_GRUPO3MV11SOTR-2020-1/FLYANDSHOOT/examples/80x86/dos/watcom/l/game[01;32musuario@DESKTOP-9EAUVS9[00m:[01;34m~/ORGANIZACION_GRUPO3MV11SOTR-2020-1/FLYANDSHOOT/examples/80x86/ddos/watcom/l/game[00m$ make
+gcc -I../../../../../../include/ -I../../../../../../ports/80x86/dos/watcom/l/ -I../../../../../../WATCOM/h/ -D_M_IX86 -c bsp.c
+In file included from [01m[K../../../../../../ports/80x86/dos/watcom/l/qf_port.h:58:0[m[K,
+                 from [01m[K../../../../../../include/qp_port.h:54[m[K,
+                 from [01m[Kbsp.c:35[m[K:
+[01m[K../../../../../../WATCOM/h/i86.h:37:10:[m[K [01;35m[Kwarning: [m[Kunknown action ‘[01m[K__push[m[K’ for ‘[01m[K#pragma pack[m[K’ - ignored [[01;35m[K-Wpragmas[m[K]
+  #pragma [01;35m[Kpack[m[K( __push, 1 )
+          [01;35m[K^~~~[m[K
+In file included from [01m[K../../../../../../WATCOM/h/i86.h:29:0[m[K,
+                 from [01m[K../../../../../../ports/80x86/dos/watcom/l/qf_port.h:58[m[K,
+                 from [01m[K../../../../../../include/qp_port.h:54[m[K,
+                 from [01m[Kbsp.c:35[m[K:
+[01m[K../../../../../../WATCOM/h/_comdef.h:58:21:[m[K [01;35m[Kwarning: [m[Kreturn type defaults to ‘[01m[Kint[m[K’ [[01;35m[K-Wimplicit-int[m[K]
+  #define _WRTLFCONV [01;35m[K_[m[K_declspec(__watcall)
+                     [01;35m[K^[m[K
+[01m[K../../../../../../WATCOM/h/_comdef.h:149:22:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[K_WRTLFCONV[m[K’
+    #define _WCRTLINK [01;36m[K_WRTLFCONV[m[K
+                      [01;36m[K^~~~~~~~~~[m[K
+[01m[K../../../../../../WATCOM/h/_comdef.h:175:23:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[K_WCRTLINK[m[K’
+    #define _WCIRTLINK [01;36m[K_WCRTLINK[m[K
+                       [01;36m[K^~~~~~~~~[m[K
+[01m[K../../../../../../WATCOM/h/i86.h:230:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[K_WCIRTLINK[m[K’
+ [01;36m[K_WCIRTLINK[m[K extern void _disable( void );
+ [01;36m[K^~~~~~~~~~[m[K
+In file included from [01m[K../../../../../../ports/80x86/dos/watcom/l/qf_port.h:58:0[m[K,
+                 from [01m[K../../../../../../include/qp_port.h:54[m[K,
+                 from [01m[Kbsp.c:35[m[K:
+[01m[K../../../../../../WATCOM/h/i86.h:[m[K In function ‘[01m[K__declspec[m[K’:
+[01m[K../../../../../../WATCOM/h/i86.h:230:24:[m[K [01;31m[Kerror: [m[Kstorage class specified for parameter ‘[01m[K_disable[m[K’
+ _WCIRTLINK extern void [01;31m[K_disable[m[K( void );
+                        [01;31m[K^~~~~~~~[m[K
+In file included from [01m[K../../../../../../WATCOM/h/i86.h:29:0[m[K,
+                 from [01m[K../../../../../../ports/80x86/dos/watcom/l/qf_port.h:58[m[K,
+                 from [01m[K../../../../../../include/qp_port.h:54[m[K,
+                 from [01m[Kbsp.c:35[m[K:
+[01m[K../../../../../../WATCOM/h/_comdef.h:58:21:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers before ‘[01m[K__declspec[m[K’
+  #define _WRTLFCONV [01;31m[K_[m[K_declspec(__watcall)
+                     [01;31m[K^[m[K
+[01m[K../../../../../../WATCOM/h/_comdef.h:149:22:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[K_WRTLFCONV[m[K’
+    #define _WCRTLINK [01;36m[K_WRTLFCONV[m[K
+                      [01;36m[K^~~~~~~~~~[m[K
+[01m[K../../../../../../WATCOM/h/_comdef.h:175:23:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[K_WCRTLINK[m[K’
+    #define _WCIRTLINK [01;36m[K_WCRTLINK[m[K
+                       [01;36m[K^~~~~~~~~[m[K
+[01m[K../../../../../../WATCOM/h/i86.h:231:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[K_WCIRTLINK[m[K’
+ [01;36m[K_WCIRTLINK[m[K extern void _enable( void );
+ [01;36m[K^~~~~~~~~~[m[K
+[01m[K../../../../../../WATCOM/h/_comdef.h:58:21:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers before ‘[01m[K__declspec[m[K’
+  #define _WRTLFCONV [01;31m[K_[m[K_declspec(__watcall)
+                     [01;31m[K^[m[K
+[01m[K../../../../../../WATCOM/h/_comdef.h:149:22:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[K_WRTLFCONV[m[K’
+    #define _WCRTLINK [01;36m[K_WRTLFCONV[m[K
+                      [01;36m[K^~~~~~~~~~[m[K
+[01m[K../../../../../../WATCOM/h/i86.h:237:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[K_WCRTLINK[m[K’
+ [01;36m[K_WCRTLINK[m[K extern void    delay(unsigned int __milliseconds);
+ [01;36m[K^~~~~~~~~[m[K
+[01m[K../../../../../../WATCOM/h/_comdef.h:58:21:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers before ‘[01m[K__declspec[m[K’
+  #define _WRTLFCONV [01;31m[K_[m[K_declspec(__watcall)
+                     [01;31m[K^[m[K
+[01m[K../../../../../../WATCOM/h/_comdef.h:149:22:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[K_WRTLFCONV[m[K’
+    #define _WCRTLINK [01;36m[K_WRTLFCONV[m[K
+                      [01;36m[K^~~~~~~~~~[m[K
+[01m[K../../../../../../WATCOM/h/i86.h:242:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[K_WCRTLINK[m[K’
+ [01;36m[K_WCRTLINK[m[K extern int     int386( int, union REGS *, union REGS * );
+ [01;36m[K^~~~~~~~~[m[K
+[01m[K../../../../../../WATCOM/h/_comdef.h:58:21:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers before ‘[01m[K__declspec[m[K’
+  #define _WRTLFCONV [01;31m[K_[m[K_declspec(__watcall)
+                     [01;31m[K^[m[K
+[01m[K../../../../../../WATCOM/h/_comdef.h:149:22:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[K_WRTLFCONV[m[K’
+    #define _WCRTLINK [01;36m[K_WRTLFCONV[m[K
+                      [01;36m[K^~~~~~~~~~[m[K
+[01m[K../../../../../../WATCOM/h/i86.h:243:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[K_WCRTLINK[m[K’
+ [01;36m[K_WCRTLINK[m[K extern int     int386x( int, union REGS *, union REGS *, struct SREGS * );
+ [01;36m[K^~~~~~~~~[m[K
+[01m[K../../../../../../WATCOM/h/_comdef.h:58:21:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers before ‘[01m[K__declspec[m[K’
+  #define _WRTLFCONV [01;31m[K_[m[K_declspec(__watcall)
+                     [01;31m[K^[m[K
+[01m[K../../../../../../WATCOM/h/_comdef.h:149:22:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[K_WRTLFCONV[m[K’
+    #define _WCRTLINK [01;36m[K_WRTLFCONV[m[K
+                      [01;36m[K^~~~~~~~~~[m[K
+[01m[K../../../../../../WATCOM/h/i86.h:245:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[K_WCRTLINK[m[K’
+ [01;36m[K_WCRTLINK[m[K extern void    intr( int, union REGPACK * );
+ [01;36m[K^~~~~~~~~[m[K
+[01m[K../../../../../../WATCOM/h/_comdef.h:58:21:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers before ‘[01m[K__declspec[m[K’
+  #define _WRTLFCONV [01;31m[K_[m[K_declspec(__watcall)
+                     [01;31m[K^[m[K
+[01m[K../../../../../../WATCOM/h/_comdef.h:149:22:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[K_WRTLFCONV[m[K’
+    #define _WCRTLINK [01;36m[K_WRTLFCONV[m[K
+                      [01;36m[K^~~~~~~~~~[m[K
+[01m[K../../../../../../WATCOM/h/i86.h:246:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[K_WCRTLINK[m[K’
+ [01;36m[K_WCRTLINK[m[K extern void    nosound( void );
+ [01;36m[K^~~~~~~~~[m[K
+[01m[K../../../../../../WATCOM/h/_comdef.h:58:21:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers before ‘[01m[K__declspec[m[K’
+  #define _WRTLFCONV [01;31m[K_[m[K_declspec(__watcall)
+                     [01;31m[K^[m[K
+[01m[K../../../../../../WATCOM/h/_comdef.h:149:22:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[K_WRTLFCONV[m[K’
+    #define _WCRTLINK [01;36m[K_WRTLFCONV[m[K
+                      [01;36m[K^~~~~~~~~~[m[K
+[01m[K../../../../../../WATCOM/h/i86.h:247:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[K_WCRTLINK[m[K’
+ [01;36m[K_WCRTLINK[m[K extern void    segread( struct SREGS * );
+ [01;36m[K^~~~~~~~~[m[K
+[01m[K../../../../../../WATCOM/h/_comdef.h:58:21:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers before ‘[01m[K__declspec[m[K’
+  #define _WRTLFCONV [01;31m[K_[m[K_declspec(__watcall)
+                     [01;31m[K^[m[K
+[01m[K../../../../../../WATCOM/h/_comdef.h:149:22:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[K_WRTLFCONV[m[K’
+    #define _WCRTLINK [01;36m[K_WRTLFCONV[m[K
+                      [01;36m[K^~~~~~~~~~[m[K
+[01m[K../../../../../../WATCOM/h/i86.h:248:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[K_WCRTLINK[m[K’
+ [01;36m[K_WCRTLINK[m[K extern void    sound( unsigned __frequency );
+ [01;36m[K^~~~~~~~~[m[K
+In file included from [01m[K../../../../../../ports/80x86/dos/watcom/l/qf_port.h:58:0[m[K,
+                 from [01m[K../../../../../../include/qp_port.h:54[m[K,
+                 from [01m[Kbsp.c:35[m[K:
+[01m[K../../../../../../WATCOM/h/i86.h:257:52:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’, ‘[01m[K,[m[K’ or ‘[01m[K)[m[K’ before ‘[01m[K*[m[K’ token
+  unsigned short _FP_SEG( const volatile void __far [01;31m[K*[m[K );
+                                                    [01;31m[K^[m[K
+[01m[K../../../../../../WATCOM/h/i86.h:268:9:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers before ‘[01m[K#pragma[m[K’
+ #pragma [01;31m[Kpack[m[K( __pop )
+         [01;31m[K^~~~[m[K
+In file included from [01m[K/usr/lib/gcc/x86_64-linux-gnu/6/include/stdint.h:9:0[m[K,
+                 from [01m[K../../../../../../ports/80x86/dos/watcom/l/qep_port.h:37[m[K,
+                 from [01m[K../../../../../../ports/80x86/dos/watcom/l/qf_port.h:60[m[K,
+                 from [01m[K../../../../../../include/qp_port.h:54[m[K,
+                 from [01m[Kbsp.c:35[m[K:
+[01m[K/usr/include/stdint.h:37:20:[m[K [01;31m[Kerror: [m[Kstorage class specified for parameter ‘[01m[Kint16_t[m[K’
+ typedef short int  [01;31m[Kint16_t[m[K;
+                    [01;31m[K^~~~~~~[m[K
+[01m[K/usr/include/stdint.h:38:15:[m[K [01;31m[Kerror: [m[Kstorage class specified for parameter ‘[01m[Kint32_t[m[K’
+ typedef int   [01;31m[Kint32_t[m[K;
+               [01;31m[K^~~~~~~[m[K
+[01m[K/usr/include/stdint.h:40:19:[m[K [01;31m[Kerror: [m[Kstorage class specified for parameter ‘[01m[Kint64_t[m[K’
+ typedef long int  [01;31m[Kint64_t[m[K;
+                   [01;31m[K^~~~~~~[m[K
+[01m[K/usr/include/stdint.h:48:24:[m[K [01;31m[Kerror: [m[Kstorage class specified for parameter ‘[01m[Kuint8_t[m[K’
+ typedef unsigned char  [01;31m[Kuint8_t[m[K;
+                        [01;31m[K^~~~~~~[m[K
+[01m[K/usr/include/stdint.h:49:28:[m[K [01;31m[Kerror: [m[Kstorage class specified for parameter ‘[01m[Kuint16_t[m[K’
+ typedef unsigned short int [01;31m[Kuint16_t[m[K;
+                            [01;31m[K^~~~~~~~[m[K
+[01m[K/usr/include/stdint.h:51:23:[m[K [01;31m[Kerror: [m[Kstorage class specified for parameter ‘[01m[Kuint32_t[m[K’
+ typedef unsigned int  [01;31m[Kuint32_t[m[K;
+                       [01;31m[K^~~~~~~~[m[K
+[01m[K/usr/include/stdint.h:55:27:[m[K [01;31m[Kerror: [m[Kstorage class specified for parameter ‘[01m[Kuint64_t[m[K’
+ typedef unsigned long int [01;31m[Kuint64_t[m[K;
+                           [01;31m[K^~~~~~~~[m[K
+[01m[K/usr/include/stdint.h:65:22:[m[K [01;31m[Kerror: [m[Kstorage class specified for parameter ‘[01m[Kint_least8_t[m[K’
+ typedef signed char  [01;31m[Kint_least8_t[m[K;
+                      [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/usr/include/stdint.h:66:20:[m[K [01;31m[Kerror: [m[Kstorage class specified for parameter ‘[01m[Kint_least16_t[m[K’
+ typedef short int  [01;31m[Kint_least16_t[m[K;
+                    [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/usr/include/stdint.h:67:15:[m[K [01;31m[Kerror: [m[Kstorage class specified for parameter ‘[01m[Kint_least32_t[m[K’
+ typedef int   [01;31m[Kint_least32_t[m[K;
+               [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/usr/include/stdint.h:69:19:[m[K [01;31m[Kerror: [m[Kstorage class specified for parameter ‘[01m[Kint_least64_t[m[K’
+ typedef long int  [01;31m[Kint_least64_t[m[K;
+                   [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/usr/include/stdint.h:76:24:[m[K [01;31m[Kerror: [m[Kstorage class specified for parameter ‘[01m[Kuint_least8_t[m[K’
+ typedef unsigned char  [01;31m[Kuint_least8_t[m[K;
+                        [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/usr/include/stdint.h:77:28:[m[K [01;31m[Kerror: [m[Kstorage class specified for parameter ‘[01m[Kuint_least16_t[m[K’
+ typedef unsigned short int [01;31m[Kuint_least16_t[m[K;
+                            [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/stdint.h:78:23:[m[K [01;31m[Kerror: [m[Kstorage class specified for parameter ‘[01m[Kuint_least32_t[m[K’
+ typedef unsigned int  [01;31m[Kuint_least32_t[m[K;
+                       [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/stdint.h:80:27:[m[K [01;31m[Kerror: [m[Kstorage class specified for parameter ‘[01m[Kuint_least64_t[m[K’
+ typedef unsigned long int [01;31m[Kuint_least64_t[m[K;
+                           [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/stdint.h:90:22:[m[K [01;31m[Kerror: [m[Kstorage class specified for parameter ‘[01m[Kint_fast8_t[m[K’
+ typedef signed char  [01;31m[Kint_fast8_t[m[K;
+                      [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/usr/include/stdint.h:92:19:[m[K [01;31m[Kerror: [m[Kstorage class specified for parameter ‘[01m[Kint_fast16_t[m[K’
+ typedef long int  [01;31m[Kint_fast16_t[m[K;
+                   [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/usr/include/stdint.h:93:19:[m[K [01;31m[Kerror: [m[Kstorage class specified for parameter ‘[01m[Kint_fast32_t[m[K’
+ typedef long int  [01;31m[Kint_fast32_t[m[K;
+                   [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/usr/include/stdint.h:94:19:[m[K [01;31m[Kerror: [m[Kstorage class specified for parameter ‘[01m[Kint_fast64_t[m[K’
+ typedef long int  [01;31m[Kint_fast64_t[m[K;
+                   [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/usr/include/stdint.h:103:24:[m[K [01;31m[Kerror: [m[Kstorage class specified for parameter ‘[01m[Kuint_fast8_t[m[K’
+ typedef unsigned char  [01;31m[Kuint_fast8_t[m[K;
+                        [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/usr/include/stdint.h:105:27:[m[K [01;31m[Kerror: [m[Kstorage class specified for parameter ‘[01m[Kuint_fast16_t[m[K’
+ typedef unsigned long int [01;31m[Kuint_fast16_t[m[K;
+                           [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/usr/include/stdint.h:106:27:[m[K [01;31m[Kerror: [m[Kstorage class specified for parameter ‘[01m[Kuint_fast32_t[m[K’
+ typedef unsigned long int [01;31m[Kuint_fast32_t[m[K;
+                           [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/usr/include/stdint.h:107:27:[m[K [01;31m[Kerror: [m[Kstorage class specified for parameter ‘[01m[Kuint_fast64_t[m[K’
+ typedef unsigned long int [01;31m[Kuint_fast64_t[m[K;
+                           [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/usr/include/stdint.h:119:19:[m[K [01;31m[Kerror: [m[Kstorage class specified for parameter ‘[01m[Kintptr_t[m[K’
+ typedef long int  [01;31m[Kintptr_t[m[K;
+                   [01;31m[K^~~~~~~~[m[K
+[01m[K/usr/include/stdint.h:122:27:[m[K [01;31m[Kerror: [m[Kstorage class specified for parameter ‘[01m[Kuintptr_t[m[K’
+ typedef unsigned long int [01;31m[Kuintptr_t[m[K;
+                           [01;31m[K^~~~~~~~~[m[K
+[01m[K/usr/include/stdint.h:134:19:[m[K [01;31m[Kerror: [m[Kstorage class specified for parameter ‘[01m[Kintmax_t[m[K’
+ typedef long int  [01;31m[Kintmax_t[m[K;
+                   [01;31m[K^~~~~~~~[m[K
+[01m[K/usr/include/stdint.h:135:27:[m[K [01;31m[Kerror: [m[Kstorage class specified for parameter ‘[01m[Kuintmax_t[m[K’
+ typedef unsigned long int [01;31m[Kuintmax_t[m[K;
+                           [01;31m[K^~~~~~~~~[m[K
+In file included from [01m[K../../../../../../ports/80x86/dos/watcom/l/qep_port.h:40:0[m[K,
+                 from [01m[K../../../../../../ports/80x86/dos/watcom/l/qf_port.h:60[m[K,
+                 from [01m[K../../../../../../include/qp_port.h:54[m[K,
+                 from [01m[Kbsp.c:35[m[K:
+[01m[K../../../../../../include/qep.h:86:22:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K=[m[K’, ‘[01m[K,[m[K’, ‘[01m[K;[m[K’, ‘[01m[Kasm[m[K’ or ‘[01m[K__attribute__[m[K’ before ‘[01m[KQSignal[m[K’
+     typedef uint16_t [01;31m[KQSignal[m[K;
+                      [01;31m[K^~~~~~~[m[K
+[01m[K../../../../../../include/qep.h:143:14:[m[K [01;31m[Kerror: [m[Kstorage class specified for parameter ‘[01m[Kchar_t[m[K’
+ typedef char [01;31m[Kchar_t[m[K;
+              [01;31m[K^~~~~~[m[K
+[01m[K../../../../../../include/qep.h:146:13:[m[K [01;31m[Kerror: [m[Kstorage class specified for parameter ‘[01m[Kint_t[m[K’
+ typedef int [01;31m[Kint_t[m[K;
+             [01;31m[K^~~~~[m[K
+[01m[K../../../../../../include/qep.h:149:13:[m[K [01;31m[Kerror: [m[Kstorage class specified for parameter ‘[01m[Kenum_t[m[K’
+ typedef int [01;31m[Kenum_t[m[K;
+             [01;31m[K^~~~~~[m[K
+[01m[K../../../../../../include/qep.h:158:15:[m[K [01;31m[Kerror: [m[Kstorage class specified for parameter ‘[01m[Kfloat32_t[m[K’
+ typedef float [01;31m[Kfloat32_t[m[K;
+               [01;31m[K^~~~~~~~~[m[K
+[01m[K../../../../../../include/qep.h:167:16:[m[K [01;31m[Kerror: [m[Kstorage class specified for parameter ‘[01m[Kfloat64_t[m[K’
+ typedef double [01;31m[Kfloat64_t[m[K;
+                [01;31m[K^~~~~~~~~[m[K
+[01m[K../../../../../../include/qep.h:185:5:[m[K [01;31m[Kerror: [m[Kunknown type name ‘[01m[KQSignal[m[K’
+     [01;31m[KQSignal[m[K sig;              /*!< signal of the event instance */
+     [01;31m[K^~~~~~~[m[K
+[01m[K../../../../../../include/qep.h:186:5:[m[K [01;31m[Kerror: [m[Kexpected specifier-qualifier-list before ‘[01m[Kuint8_t[m[K’
+     [01;31m[Kuint8_t[m[K poolId_;          /*!< pool ID (0 for static event) */
+     [01;31m[K^~~~~~~[m[K
+[01m[K../../../../../../include/qep.h:188:3:[m[K [01;31m[Kerror: [m[Kstorage class specified for parameter ‘[01m[KQEvt[m[K’
+ } [01;31m[KQEvt[m[K;
+   [01;31m[K^~~~[m[K
+[01m[K../../../../../../include/qep.h:239:22:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K=[m[K’, ‘[01m[K,[m[K’, ‘[01m[K;[m[K’, ‘[01m[Kasm[m[K’ or ‘[01m[K__attribute__[m[K’ before ‘[01m[KQState[m[K’
+ typedef uint_fast8_t [01;31m[KQState[m[K;
+                      [01;31m[K^~~~~~[m[K
+[01m[K../../../../../../include/qep.h:242:17:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[K*[m[K’ token
+ typedef QState ([01;31m[K*[m[KQStateHandler)(void * const me, QEvt const * const e);
+                 [01;31m[K^[m[K
+[01m[K../../../../../../include/qep.h:245:17:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[K*[m[K’ token
+ typedef QState ([01;31m[K*[m[KQActionHandler)(void * const me);
+                 [01;31m[K^[m[K
+[01m[K../../../../../../include/qep.h:281:5:[m[K [01;31m[Kerror: [m[Kexpected specifier-qualifier-list before ‘[01m[KQStateHandler[m[K’
+     [01;31m[KQStateHandler[m[K  const stateHandler;  /*!< state handler function */
+     [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K../../../../../../include/qep.h:285:3:[m[K [01;31m[Kerror: [m[Kstorage class specified for parameter ‘[01m[KQMState[m[K’
+ } [01;31m[KQMState[m[K;
+   [01;31m[K^~~~~~~[m[K
+[01m[K../../../../../../include/qep.h:289:5:[m[K [01;31m[Kerror: [m[Kexpected specifier-qualifier-list before ‘[01m[KQMState[m[K’
+     [01;31m[KQMState[m[K        const *target;
+     [01;31m[K^~~~~~~[m[K
+[01m[K../../../../../../include/qep.h:291:3:[m[K [01;31m[Kerror: [m[Kstorage class specified for parameter ‘[01m[KQMTranActTable[m[K’
+ } [01;31m[KQMTranActTable[m[K;
+   [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K../../../../../../include/qep.h:300:5:[m[K [01;31m[Kerror: [m[Kexpected specifier-qualifier-list before ‘[01m[KQMState[m[K’
+     [01;31m[KQMState[m[K        const *obj;   /*!< pointer to QMState object */
+     [01;31m[K^~~~~~~[m[K
+[01m[K../../../../../../include/qep.h:299:1:[m[K [01;35m[Kwarning: [m[Kempty declaration
+ [01;35m[Kunion[m[K QMAttr {
+ [01;35m[K^~~~~[m[K
+[01m[K../../../../../../include/qep.h:309:25:[m[K [01;31m[Kerror: [m[Kstorage class specified for parameter ‘[01m[KQMsmVtbl[m[K’
+ typedef struct QMsmVtbl [01;31m[KQMsmVtbl[m[K;
+                         [01;31m[K^~~~~~~~[m[K
+[01m[K../../../../../../include/qep.h:336:5:[m[K [01;31m[Kerror: [m[Kexpected specifier-qualifier-list before ‘[01m[KQMsmVtbl[m[K’
+     [01;31m[KQMsmVtbl[m[K const *vptr; /*!< virtual pointer */
+     [01;31m[K^~~~~~~~[m[K
+[01m[K../../../../../../include/qep.h:339:3:[m[K [01;31m[Kerror: [m[Kstorage class specified for parameter ‘[01m[KQMsm[m[K’
+ } [01;31m[KQMsm[m[K;
+   [01;31m[K^~~~[m[K
+[01m[K../../../../../../include/qep.h:344:18:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[KQMsm[m[K’
+     void (*init)([01;31m[KQMsm[m[K * const me, QEvt const * const e);
+                  [01;31m[K^~~~[m[K
+[01m[K../../../../../../include/qep.h:344:35:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[KQEvt[m[K’
+     void (*init)(QMsm * const me, [01;31m[KQEvt[m[K const * const e);
+                                   [01;31m[K^~~~[m[K
+[01m[K../../../../../../include/qep.h:347:22:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[KQMsm[m[K’
+     void (*dispatch)([01;31m[KQMsm[m[K * const me, QEvt const * const e);
+                      [01;31m[K^~~~[m[K
+[01m[K../../../../../../include/qep.h:347:39:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[KQEvt[m[K’
+     void (*dispatch)(QMsm * const me, [01;31m[KQEvt[m[K const * const e);
+                                       [01;31m[K^~~~[m[K
+[01m[K../../../../../../include/qep.h:348:1:[m[K [01;35m[Kwarning: [m[Kno semicolon at end of struct or union
+ [01;35m[K}[m[K;
+ [01;35m[K^[m[K
+[01m[K../../../../../../include/qep.h:342:1:[m[K [01;35m[Kwarning: [m[Kempty declaration
+ [01;35m[Kstruct[m[K QMsmVtbl {
+ [01;35m[K^~~~~~[m[K
+[01m[K../../../../../../include/qep.h:351:16:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[KQMsm[m[K’
+ void QMsm_ctor([01;31m[KQMsm[m[K * const me, QStateHandler initial);
+                [01;31m[K^~~~[m[K
+[01m[K../../../../../../include/qep.h:351:33:[m[K [01;31m[Kerror: [m[Kunknown type name ‘[01m[KQStateHandler[m[K’
+ void QMsm_ctor(QMsm * const me, [01;31m[KQStateHandler[m[K initial);
+                                 [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K../../../../../../include/qep.h:372:17:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[KQMsm[m[K’
+ void QMsm_init_([01;31m[KQMsm[m[K * const me, QEvt const * const e);
+                 [01;31m[K^~~~[m[K
+[01m[K../../../../../../include/qep.h:372:34:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[KQEvt[m[K’
+ void QMsm_init_(QMsm * const me, [01;31m[KQEvt[m[K const * const e);
+                                  [01;31m[K^~~~[m[K
+[01m[K../../../../../../include/qep.h:388:21:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[KQMsm[m[K’
+ void QMsm_dispatch_([01;31m[KQMsm[m[K * const me, QEvt const * const e);
+                     [01;31m[K^~~~[m[K
+[01m[K../../../../../../include/qep.h:388:38:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[KQEvt[m[K’
+ void QMsm_dispatch_(QMsm * const me, [01;31m[KQEvt[m[K const * const e);
+                                      [01;31m[K^~~~[m[K
+[01m[K../../../../../../include/qep.h:391:1:[m[K [01;31m[Kerror: [m[Kunknown type name ‘[01m[KQState[m[K’
+ [01;31m[KQState[m[K QMsm_execTatbl_(QMsm * const me, QMTranActTable const *tatbl);
+ [01;31m[K^~~~~~[m[K
+[01m[K../../../../../../include/qep.h:391:24:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[KQMsm[m[K’
+ QState QMsm_execTatbl_([01;31m[KQMsm[m[K * const me, QMTranActTable const *tatbl);
+                        [01;31m[K^~~~[m[K
+[01m[K../../../../../../include/qep.h:391:41:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[KQMTranActTable[m[K’
+ QState QMsm_execTatbl_(QMsm * const me, [01;31m[KQMTranActTable[m[K const *tatbl);
+                                         [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K../../../../../../include/qep.h:396:21:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[KQMsm[m[K’
+ bool QMsm_isInState([01;31m[KQMsm[m[K * const me, QMState const *state);
+                     [01;31m[K^~~~[m[K
+[01m[K../../../../../../include/qep.h:396:38:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[KQMState[m[K’
+ bool QMsm_isInState(QMsm * const me, [01;31m[KQMState[m[K const *state);
+                                      [01;31m[K^~~~~~~[m[K
+[01m[K../../../../../../include/qep.h:417:14:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K=[m[K’, ‘[01m[K,[m[K’, ‘[01m[K;[m[K’, ‘[01m[Kasm[m[K’ or ‘[01m[K__attribute__[m[K’ before ‘[01m[KQHsm[m[K’
+ typedef QMsm [01;31m[KQHsm[m[K;
+              [01;31m[K^~~~[m[K
+[01m[K../../../../../../include/qep.h:422:16:[m[K [01;31m[Kerror: [m[Kunknown type name ‘[01m[KQHsm[m[K’
+ void QHsm_ctor([01;31m[KQHsm[m[K * const me, QStateHandler initial);
+                [01;31m[K^~~~[m[K
+[01m[K../../../../../../include/qep.h:422:33:[m[K [01;31m[Kerror: [m[Kunknown type name ‘[01m[KQStateHandler[m[K’
+ void QHsm_ctor(QHsm * const me, [01;31m[KQStateHandler[m[K initial);
+                                 [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K../../../../../../include/qep.h:434:17:[m[K [01;31m[Kerror: [m[Kunknown type name ‘[01m[KQHsm[m[K’
+ void QHsm_init_([01;31m[KQHsm[m[K * const me, QEvt const * const e);
+                 [01;31m[K^~~~[m[K
+[01m[K../../../../../../include/qep.h:434:34:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[KQEvt[m[K’
+ void QHsm_init_(QHsm * const me, [01;31m[KQEvt[m[K const * const e);
+                                  [01;31m[K^~~~[m[K
+[01m[K../../../../../../include/qep.h:438:21:[m[K [01;31m[Kerror: [m[Kunknown type name ‘[01m[KQHsm[m[K’
+ void QHsm_dispatch_([01;31m[KQHsm[m[K * const me, QEvt const * const e);
+                     [01;31m[K^~~~[m[K
+[01m[K../../../../../../include/qep.h:438:38:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[KQEvt[m[K’
+ void QHsm_dispatch_(QHsm * const me, [01;31m[KQEvt[m[K const * const e);
+                                      [01;31m[K^~~~[m[K
+[01m[K../../../../../../include/qep.h:443:16:[m[K [01;31m[Kerror: [m[Kunknown type name ‘[01m[KQHsm[m[K’
+ bool QHsm_isIn([01;31m[KQHsm[m[K * const me, QStateHandler const state);
+                [01;31m[K^~~~[m[K
+[01m[K../../../../../../include/qep.h:443:33:[m[K [01;31m[Kerror: [m[Kunknown type name ‘[01m[KQStateHandler[m[K’
+ bool QHsm_isIn(QHsm * const me, [01;31m[KQStateHandler[m[K const state);
+                                 [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K../../../../../../include/qep.h:448:1:[m[K [01;31m[Kerror: [m[Kunknown type name ‘[01m[KQState[m[K’
+ [01;31m[KQState[m[K QHsm_top(void const * const me, QEvt const * const e);
+ [01;31m[K^~~~~~[m[K
+[01m[K../../../../../../include/qep.h:448:40:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[KQEvt[m[K’
+ QState QHsm_top(void const * const me, [01;31m[KQEvt[m[K const * const e);
+                                        [01;31m[K^~~~[m[K
+[01m[K../../../../../../include/qep.h:469:14:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K=[m[K’, ‘[01m[K,[m[K’, ‘[01m[K;[m[K’, ‘[01m[Kasm[m[K’ or ‘[01m[K__attribute__[m[K’ before ‘[01m[KQFsm[m[K’
+ typedef QMsm [01;31m[KQFsm[m[K;
+              [01;31m[K^~~~[m[K
+[01m[K../../../../../../include/qep.h:472:16:[m[K [01;31m[Kerror: [m[Kunknown type name ‘[01m[KQFsm[m[K’
+ void QFsm_ctor([01;31m[KQFsm[m[K * const me, QStateHandler initial);
+                [01;31m[K^~~~[m[K
+[01m[K../../../../../../include/qep.h:472:33:[m[K [01;31m[Kerror: [m[Kunknown type name ‘[01m[KQStateHandler[m[K’
+ void QFsm_ctor(QFsm * const me, [01;31m[KQStateHandler[m[K initial);
+                                 [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K../../../../../../include/qep.h:475:17:[m[K [01;31m[Kerror: [m[Kunknown type name ‘[01m[KQFsm[m[K’
+ void QFsm_init_([01;31m[KQFsm[m[K * const me, QEvt const * const e);
+                 [01;31m[K^~~~[m[K
+[01m[K../../../../../../include/qep.h:475:34:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[KQEvt[m[K’
+ void QFsm_init_(QFsm * const me, [01;31m[KQEvt[m[K const * const e);
+                                  [01;31m[K^~~~[m[K
+[01m[K../../../../../../include/qep.h:478:21:[m[K [01;31m[Kerror: [m[Kunknown type name ‘[01m[KQFsm[m[K’
+ void QFsm_dispatch_([01;31m[KQFsm[m[K * const me, QEvt const * const e);
+                     [01;31m[K^~~~[m[K
+[01m[K../../../../../../include/qep.h:478:38:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[KQEvt[m[K’
+ void QFsm_dispatch_(QFsm * const me, [01;31m[KQEvt[m[K const * const e);
+                                      [01;31m[K^~~~[m[K
+[01m[K../../../../../../include/qep.h:496:1:[m[K [01;35m[Kwarning: [m[Kempty declaration
+ [01;35m[Kenum[m[K {
+ [01;35m[K^~~~[m[K
+[01m[K../../../../../../include/qep.h:644:1:[m[K [01;35m[Kwarning: [m[Kempty declaration
+ [01;35m[Kenum[m[K {
+ [01;35m[K^~~~[m[K
+In file included from [01m[K../../../../../../include/qvanilla.h:44:0[m[K,
+                 from [01m[K../../../../../../ports/80x86/dos/watcom/l/qf_port.h:61[m[K,
+                 from [01m[K../../../../../../include/qp_port.h:54[m[K,
+                 from [01m[Kbsp.c:35[m[K:
+[01m[K../../../../../../include/qequeue.h:77:26:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K=[m[K’, ‘[01m[K,[m[K’, ‘[01m[K;[m[K’, ‘[01m[Kasm[m[K’ or ‘[01m[K__attribute__[m[K’ before ‘[01m[KQEQueueCtr[m[K’
+     typedef uint_fast8_t [01;31m[KQEQueueCtr[m[K;
+                          [01;31m[K^~~~~~~~~~[m[K
+[01m[K../../../../../../include/qequeue.h:144:5:[m[K [01;31m[Kerror: [m[Kexpected specifier-qualifier-list before ‘[01m[KQEvt[m[K’
+     [01;31m[KQEvt[m[K const * volatile frontEvt;
+     [01;31m[K^~~~[m[K
+[01m[K../../../../../../include/qequeue.h:170:3:[m[K [01;31m[Kerror: [m[Kstorage class specified for parameter ‘[01m[KQEQueue[m[K’
+ } [01;31m[KQEQueue[m[K;
+   [01;31m[K^~~~~~~[m[K
+[01m[K../../../../../../include/qequeue.h:175:19:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[KQEQueue[m[K’
+ void QEQueue_init([01;31m[KQEQueue[m[K * const me,
+                   [01;31m[K^~~~~~~[m[K
+[01m[K../../../../../../include/qequeue.h:176:19:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[KQEvt[m[K’
+                   [01;31m[KQEvt[m[K const *qSto[], uint_fast16_t const qLen);
+                   [01;31m[K^~~~[m[K
+[01m[K../../../../../../include/qequeue.h:176:39:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[Kuint_fast16_t[m[K’
+                   QEvt const *qSto[], [01;31m[Kuint_fast16_t[m[K const qLen);
+                                       [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K../../../../../../include/qequeue.h:179:19:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[KQEQueue[m[K’
+ bool QEQueue_post([01;31m[KQEQueue[m[K * const me, QEvt const * const e,
+                   [01;31m[K^~~~~~~[m[K
+[01m[K../../../../../../include/qequeue.h:179:39:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[KQEvt[m[K’
+ bool QEQueue_post(QEQueue * const me, [01;31m[KQEvt[m[K const * const e,
+                                       [01;31m[K^~~~[m[K
+[01m[K../../../../../../include/qequeue.h:180:19:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[Kuint_fast16_t[m[K’
+                   [01;31m[Kuint_fast16_t[m[K const margin);
+                   [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K../../../../../../include/qequeue.h:183:23:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[KQEQueue[m[K’
+ void QEQueue_postLIFO([01;31m[KQEQueue[m[K * const me, QEvt const * const e);
+                       [01;31m[K^~~~~~~[m[K
+[01m[K../../../../../../include/qequeue.h:183:43:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[KQEvt[m[K’
+ void QEQueue_postLIFO(QEQueue * const me, [01;31m[KQEvt[m[K const * const e);
+                                           [01;31m[K^~~~[m[K
+[01m[K../../../../../../include/qequeue.h:186:1:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers before ‘[01m[KQEvt[m[K’
+ [01;31m[KQEvt[m[K const *QEQueue_get(QEQueue * const me);
+ [01;31m[K^~~~[m[K
+In file included from [01m[K../../../../../../include/qvanilla.h:45:0[m[K,
+                 from [01m[K../../../../../../ports/80x86/dos/watcom/l/qf_port.h:61[m[K,
+                 from [01m[K../../../../../../include/qp_port.h:54[m[K,
+                 from [01m[Kbsp.c:35[m[K:
+[01m[K../../../../../../include/qmpool.h:63:22:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K=[m[K’, ‘[01m[K,[m[K’, ‘[01m[K;[m[K’, ‘[01m[Kasm[m[K’ or ‘[01m[K__attribute__[m[K’ before ‘[01m[KQMPoolSize[m[K’
+     typedef uint16_t [01;31m[KQMPoolSize[m[K;
+                      [01;31m[K^~~~~~~~~~[m[K
+[01m[K../../../../../../include/qmpool.h:88:22:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K=[m[K’, ‘[01m[K,[m[K’, ‘[01m[K;[m[K’, ‘[01m[Kasm[m[K’ or ‘[01m[K__attribute__[m[K’ before ‘[01m[KQMPoolCtr[m[K’
+     typedef uint16_t [01;31m[KQMPoolCtr[m[K;
+                      [01;31m[K^~~~~~~~~[m[K
+[01m[K../../../../../../include/qmpool.h:123:5:[m[K [01;31m[Kerror: [m[Kunknown type name ‘[01m[KQMPoolSize[m[K’
+     [01;31m[KQMPoolSize[m[K blockSize;
+     [01;31m[K^~~~~~~~~~[m[K
+[01m[K../../../../../../include/qmpool.h:126:5:[m[K [01;31m[Kerror: [m[Kunknown type name ‘[01m[KQMPoolCtr[m[K’
+     [01;31m[KQMPoolCtr[m[K nTot;
+     [01;31m[K^~~~~~~~~[m[K
+[01m[K../../../../../../include/qmpool.h:129:5:[m[K [01;31m[Kerror: [m[Kexpected specifier-qualifier-list before ‘[01m[KQMPoolCtr[m[K’
+     [01;31m[KQMPoolCtr[m[K volatile nFree;
+     [01;31m[K^~~~~~~~~[m[K
+[01m[K../../../../../../include/qmpool.h:139:3:[m[K [01;31m[Kerror: [m[Kstorage class specified for parameter ‘[01m[KQMPool[m[K’
+ } [01;31m[KQMPool[m[K;
+   [01;31m[K^~~~~~[m[K
+[01m[K../../../../../../include/qmpool.h:144:18:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[KQMPool[m[K’
+ void QMPool_init([01;31m[KQMPool[m[K * const me, void * const poolSto,
+                  [01;31m[K^~~~~~[m[K
+[01m[K../../../../../../include/qmpool.h:145:18:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[Kuint_fast16_t[m[K’
+                  [01;31m[Kuint_fast16_t[m[K poolSize, uint_fast16_t blockSize);
+                  [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K../../../../../../include/qmpool.h:145:42:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[Kuint_fast16_t[m[K’
+                  uint_fast16_t poolSize, [01;31m[Kuint_fast16_t[m[K blockSize);
+                                          [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K../../../../../../include/qmpool.h:148:18:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[KQMPool[m[K’
+ void *QMPool_get([01;31m[KQMPool[m[K * const me, uint_fast16_t const margin);
+                  [01;31m[K^~~~~~[m[K
+[01m[K../../../../../../include/qmpool.h:148:37:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[Kuint_fast16_t[m[K’
+ void *QMPool_get(QMPool * const me, [01;31m[Kuint_fast16_t[m[K const margin);
+                                     [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K../../../../../../include/qmpool.h:151:17:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[KQMPool[m[K’
+ void QMPool_put([01;31m[KQMPool[m[K * const me, void *b);
+                 [01;31m[K^~~~~~[m[K
+In file included from [01m[K../../../../../../include/qvanilla.h:46:0[m[K,
+                 from [01m[K../../../../../../ports/80x86/dos/watcom/l/qf_port.h:61[m[K,
+                 from [01m[K../../../../../../include/qp_port.h:54[m[K,
+                 from [01m[Kbsp.c:35[m[K:
+[01m[K../../../../../../include/qpset.h:55:5:[m[K [01;31m[Kerror: [m[Kexpected specifier-qualifier-list before ‘[01m[Kuint_fast8_t[m[K’
+     [01;31m[Kuint_fast8_t[m[K volatile bits;  /*!< bitmask with a bit for each element */
+     [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K../../../../../../include/qpset.h:56:3:[m[K [01;31m[Kerror: [m[Kstorage class specified for parameter ‘[01m[KQPSet8[m[K’
+ } [01;31m[KQPSet8[m[K;
+   [01;31m[K^~~~~~[m[K
+[01m[K../../../../../../include/qpset.h:110:5:[m[K [01;31m[Kerror: [m[Kexpected specifier-qualifier-list before ‘[01m[Kuint_fast8_t[m[K’
+     [01;31m[Kuint_fast8_t[m[K volatile bytes;
+     [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K../../../../../../include/qpset.h:123:3:[m[K [01;31m[Kerror: [m[Kstorage class specified for parameter ‘[01m[KQPSet64[m[K’
+ } [01;31m[KQPSet64[m[K;
+   [01;31m[K^~~~~~~[m[K
+In file included from [01m[K../../../../../../ports/80x86/dos/watcom/l/qf_port.h:62:0[m[K,
+                 from [01m[K../../../../../../include/qp_port.h:54[m[K,
+                 from [01m[Kbsp.c:35[m[K:
+[01m[K../../../../../../include/qf.h:62:22:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K=[m[K’, ‘[01m[K,[m[K’, ‘[01m[K;[m[K’, ‘[01m[Kasm[m[K’ or ‘[01m[K__attribute__[m[K’ before ‘[01m[KQEvtSize[m[K’
+     typedef uint16_t [01;31m[KQEvtSize[m[K;
+                      [01;31m[K^~~~~~~~[m[K
+[01m[K../../../../../../include/qf.h:87:1:[m[K [01;35m[Kwarning: [m[Kempty declaration
+ [01;35m[Kstruct[m[K QEQueue; /* forward declaration */
+ [01;35m[K^~~~~~[m[K
+[01m[K../../../../../../include/qf.h:111:5:[m[K [01;31m[Kerror: [m[Kunknown type name ‘[01m[KQHsm[m[K’
+     [01;31m[KQHsm[m[K super; /*!< inherits ::QHsm */
+     [01;31m[K^~~~[m[K
+In file included from [01m[K../../../../../../ports/80x86/dos/watcom/l/qf_port.h:61:0[m[K,
+                 from [01m[K../../../../../../include/qp_port.h:54[m[K,
+                 from [01m[Kbsp.c:35[m[K:
+[01m[K../../../../../../include/qvanilla.h:51:25:[m[K [01;31m[Kerror: [m[Kexpected specifier-qualifier-list before ‘[01m[KQEQueue[m[K’
+ #define QF_EQUEUE_TYPE  [01;31m[KQ[m[KEQueue
+                         [01;31m[K^[m[K
+[01m[K../../../../../../include/qf.h:125:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KQF_EQUEUE_TYPE[m[K’
+     [01;36m[KQF_EQUEUE_TYPE[m[K eQueue;
+     [01;36m[K^~~~~~~~~~~~~~[m[K
+In file included from [01m[K../../../../../../ports/80x86/dos/watcom/l/qf_port.h:62:0[m[K,
+                 from [01m[K../../../../../../include/qp_port.h:54[m[K,
+                 from [01m[Kbsp.c:35[m[K:
+[01m[K../../../../../../include/qf.h:154:3:[m[K [01;31m[Kerror: [m[Kstorage class specified for parameter ‘[01m[KQActive[m[K’
+ } [01;31m[KQActive[m[K;
+   [01;31m[K^~~~~~~[m[K
+[01m[K../../../../../../include/qf.h:158:5:[m[K [01;31m[Kerror: [m[Kexpected specifier-qualifier-list before ‘[01m[KQMsmVtbl[m[K’
+     [01;31m[KQMsmVtbl[m[K super; /*!< inherits QMsmVtbl */
+     [01;31m[K^~~~~~~~[m[K
+[01m[K../../../../../../include/qf.h:181:3:[m[K [01;31m[Kerror: [m[Kstorage class specified for parameter ‘[01m[KQActiveVtbl[m[K’
+ } [01;31m[KQActiveVtbl[m[K;
+   [01;31m[K^~~~~~~~~~~[m[K
+[01m[K../../../../../../include/qf.h:185:21:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[KQActive[m[K’
+ void QActive_start_([01;31m[KQActive[m[K * const me, uint_fast8_t prio,
+                     [01;31m[K^~~~~~~[m[K
+[01m[K../../../../../../include/qf.h:185:41:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[Kuint_fast8_t[m[K’
+ void QActive_start_(QActive * const me, [01;31m[Kuint_fast8_t[m[K prio,
+                                         [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K../../../../../../include/qf.h:186:21:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[KQEvt[m[K’
+                     [01;31m[KQEvt[m[K const *qSto[], uint_fast16_t qLen,
+                     [01;31m[K^~~~[m[K
+[01m[K../../../../../../include/qf.h:186:41:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[Kuint_fast16_t[m[K’
+                     QEvt const *qSto[], [01;31m[Kuint_fast16_t[m[K qLen,
+                                         [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K../../../../../../include/qf.h:187:35:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[Kuint_fast16_t[m[K’
+                     void *stkSto, [01;31m[Kuint_fast16_t[m[K stkSize,
+                                   [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K../../../../../../include/qf.h:188:21:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[KQEvt[m[K’
+                     [01;31m[KQEvt[m[K const *ie);
+                     [01;31m[K^~~~[m[K
+[01m[K../../../../../../include/qf.h:282:24:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[KQActive[m[K’
+     bool QActive_post_([01;31m[KQActive[m[K * const me, QEvt const * const e,
+                        [01;31m[K^~~~~~~[m[K
+[01m[K../../../../../../include/qf.h:282:44:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[KQEvt[m[K’
+     bool QActive_post_(QActive * const me, [01;31m[KQEvt[m[K const * const e,
+                                            [01;31m[K^~~~[m[K
+[01m[K../../../../../../include/qf.h:283:26:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[Kuint_fast16_t[m[K’
+                          [01;31m[Kuint_fast16_t[m[K const margin);
+                          [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K../../../../../../include/qf.h:296:24:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[KQActive[m[K’
+ void QActive_postLIFO_([01;31m[KQActive[m[K * const me, QEvt const * const e);
+                        [01;31m[K^~~~~~~[m[K
+[01m[K../../../../../../include/qf.h:296:44:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[KQEvt[m[K’
+ void QActive_postLIFO_(QActive * const me, [01;31m[KQEvt[m[K const * const e);
+                                            [01;31m[K^~~~[m[K
+[01m[K../../../../../../include/qf.h:312:19:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[KQActive[m[K’
+ void QActive_ctor([01;31m[KQActive[m[K * const me, QStateHandler initial);
+                   [01;31m[K^~~~~~~[m[K
+[01m[K../../../../../../include/qf.h:312:39:[m[K [01;31m[Kerror: [m[Kunknown type name ‘[01m[KQStateHandler[m[K’
+ void QActive_ctor(QActive * const me, [01;31m[KQStateHandler[m[K initial);
+                                       [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K../../../../../../include/qf.h:316:19:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[KQActive[m[K’
+ void QActive_stop([01;31m[KQActive[m[K * const me);
+                   [01;31m[K^~~~~~~[m[K
+[01m[K../../../../../../include/qf.h:319:32:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kconst[m[K’
+ void QActive_subscribe(QActive [01;31m[Kconst[m[K * const me, enum_t const sig);
+                                [01;31m[K^~~~~[m[K
+[01m[K../../../../../../include/qf.h:322:34:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kconst[m[K’
+ void QActive_unsubscribe(QActive [01;31m[Kconst[m[K * const me, enum_t const sig);
+                                  [01;31m[K^~~~~[m[K
+[01m[K../../../../../../include/qf.h:325:37:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kconst[m[K’
+ void QActive_unsubscribeAll(QActive [01;31m[Kconst[m[K * const me);
+                                     [01;31m[K^~~~~[m[K
+[01m[K../../../../../../include/qf.h:329:20:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[KQActive[m[K’
+ bool QActive_defer([01;31m[KQActive[m[K * const me,
+                    [01;31m[K^~~~~~~[m[K
+[01m[K../../../../../../include/qf.h:330:20:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[KQEQueue[m[K’
+                    [01;31m[KQEQueue[m[K * const eq, QEvt const * const e);
+                    [01;31m[K^~~~~~~[m[K
+[01m[K../../../../../../include/qf.h:330:40:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[KQEvt[m[K’
+                    QEQueue * const eq, [01;31m[KQEvt[m[K const * const e);
+                                        [01;31m[K^~~~[m[K
+[01m[K../../../../../../include/qf.h:333:21:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[KQActive[m[K’
+ bool QActive_recall([01;31m[KQActive[m[K * const me, QEQueue * const eq);
+                     [01;31m[K^~~~~~~[m[K
+[01m[K../../../../../../include/qf.h:333:41:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[KQEQueue[m[K’
+ bool QActive_recall(QActive * const me, [01;31m[KQEQueue[m[K * const eq);
+                                         [01;31m[K^~~~~~~[m[K
+[01m[K../../../../../../include/qf.h:336:1:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers before ‘[01m[KQEvt[m[K’
+ [01;31m[KQEvt[m[K const *QActive_get_(QActive *const me);
+ [01;31m[K^~~~[m[K
+[01m[K../../../../../../include/qf.h:349:17:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K=[m[K’, ‘[01m[K,[m[K’, ‘[01m[K;[m[K’, ‘[01m[Kasm[m[K’ or ‘[01m[K__attribute__[m[K’ before ‘[01m[KQMActive[m[K’
+ typedef QActive [01;31m[KQMActive[m[K;
+                 [01;31m[K^~~~~~~~[m[K
+[01m[K../../../../../../include/qf.h:352:20:[m[K [01;31m[Kerror: [m[Kunknown type name ‘[01m[KQMActive[m[K’
+ void QMActive_ctor([01;31m[KQMActive[m[K * const me, QStateHandler initial);
+                    [01;31m[K^~~~~~~~[m[K
+[01m[K../../../../../../include/qf.h:352:41:[m[K [01;31m[Kerror: [m[Kunknown type name ‘[01m[KQStateHandler[m[K’
+ void QMActive_ctor(QMActive * const me, [01;31m[KQStateHandler[m[K initial);
+                                         [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K../../../../../../include/qf.h:369:22:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K=[m[K’, ‘[01m[K,[m[K’, ‘[01m[K;[m[K’, ‘[01m[Kasm[m[K’ or ‘[01m[K__attribute__[m[K’ before ‘[01m[KQTimeEvtCtr[m[K’
+     typedef uint16_t [01;31m[KQTimeEvtCtr[m[K;
+                      [01;31m[K^~~~~~~~~~~[m[K
+[01m[K../../../../../../include/qf.h:412:5:[m[K [01;31m[Kerror: [m[Kexpected specifier-qualifier-list before ‘[01m[KQEvt[m[K’
+     [01;31m[KQEvt[m[K super;
+     [01;31m[K^~~~[m[K
+[01m[K../../../../../../include/qf.h:437:3:[m[K [01;31m[Kerror: [m[Kstorage class specified for parameter ‘[01m[KQTimeEvt[m[K’
+ } [01;31m[KQTimeEvt[m[K;
+   [01;31m[K^~~~~~~~[m[K
+[01m[K../../../../../../include/qf.h:442:21:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[KQTimeEvt[m[K’
+ void QTimeEvt_ctorX([01;31m[KQTimeEvt[m[K * const me, QActive * const act,
+                     [01;31m[K^~~~~~~~[m[K
+[01m[K../../../../../../include/qf.h:442:42:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[KQActive[m[K’
+ void QTimeEvt_ctorX(QTimeEvt * const me, [01;31m[KQActive[m[K * const act,
+                                          [01;31m[K^~~~~~~[m[K
+[01m[K../../../../../../include/qf.h:443:21:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[Kenum_t[m[K’
+                     [01;31m[Kenum_t[m[K const sig, uint_fast8_t tickRate);
+                     [01;31m[K^~~~~~[m[K
+[01m[K../../../../../../include/qf.h:443:39:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[Kuint_fast8_t[m[K’
+                     enum_t const sig, [01;31m[Kuint_fast8_t[m[K tickRate);
+                                       [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K../../../../../../include/qf.h:446:20:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[KQTimeEvt[m[K’
+ void QTimeEvt_armX([01;31m[KQTimeEvt[m[K * const me,
+                    [01;31m[K^~~~~~~~[m[K
+[01m[K../../../../../../include/qf.h:447:20:[m[K [01;31m[Kerror: [m[Kunknown type name ‘[01m[KQTimeEvtCtr[m[K’
+                    [01;31m[KQTimeEvtCtr[m[K const nTicks, QTimeEvtCtr const interval);
+                    [01;31m[K^~~~~~~~~~~[m[K
+[01m[K../../../../../../include/qf.h:447:46:[m[K [01;31m[Kerror: [m[Kunknown type name ‘[01m[KQTimeEvtCtr[m[K’
+                    QTimeEvtCtr const nTicks, [01;31m[KQTimeEvtCtr[m[K const interval);
+                                              [01;31m[K^~~~~~~~~~~[m[K
+[01m[K../../../../../../include/qf.h:450:21:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[KQTimeEvt[m[K’
+ bool QTimeEvt_rearm([01;31m[KQTimeEvt[m[K * const me, QTimeEvtCtr const nTicks);
+                     [01;31m[K^~~~~~~~[m[K
+[01m[K../../../../../../include/qf.h:450:42:[m[K [01;31m[Kerror: [m[Kunknown type name ‘[01m[KQTimeEvtCtr[m[K’
+ bool QTimeEvt_rearm(QTimeEvt * const me, [01;31m[KQTimeEvtCtr[m[K const nTicks);
+                                          [01;31m[K^~~~~~~~~~~[m[K
+[01m[K../../../../../../include/qf.h:453:22:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[KQTimeEvt[m[K’
+ bool QTimeEvt_disarm([01;31m[KQTimeEvt[m[K * const me);
+                      [01;31m[K^~~~~~~~[m[K
+[01m[K../../../../../../include/qf.h:456:1:[m[K [01;31m[Kerror: [m[Kunknown type name ‘[01m[KQTimeEvtCtr[m[K’
+ [01;31m[KQTimeEvtCtr[m[K QTimeEvt_ctr(QTimeEvt const * const me);
+ [01;31m[K^~~~~~~~~~~[m[K
+[01m[K../../../../../../include/qf.h:456:35:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kconst[m[K’
+ QTimeEvtCtr QTimeEvt_ctr(QTimeEvt [01;31m[Kconst[m[K * const me);
+                                   [01;31m[K^~~~~[m[K
+[01m[K../../../../../../include/qf.h:483:5:[m[K [01;31m[Kerror: [m[Kexpected specifier-qualifier-list before ‘[01m[Kuint8_t[m[K’
+     [01;31m[Kuint8_t[m[K bits[((QF_MAX_ACTIVE - 1) / 8) + 1];
+     [01;31m[K^~~~~~~[m[K
+[01m[K../../../../../../include/qf.h:484:3:[m[K [01;31m[Kerror: [m[Kstorage class specified for parameter ‘[01m[KQSubscrList[m[K’
+ } [01;31m[KQSubscrList[m[K;
+   [01;31m[K^~~~~~~~~~~[m[K
+[01m[K../../../../../../include/qf.h:492:16:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[KQSubscrList[m[K’
+ void QF_psInit([01;31m[KQSubscrList[m[K * const subscrSto, enum_t const maxSignal);
+                [01;31m[K^~~~~~~~~~~[m[K
+[01m[K../../../../../../include/qf.h:492:47:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[Kenum_t[m[K’
+ void QF_psInit(QSubscrList * const subscrSto, [01;31m[Kenum_t[m[K const maxSignal);
+                                               [01;31m[K^~~~~~[m[K
+[01m[K../../../../../../include/qf.h:495:40:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[Kuint_fast16_t[m[K’
+ void QF_poolInit(void * const poolSto, [01;31m[Kuint_fast16_t[m[K const poolSize,
+                                        [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K../../../../../../include/qf.h:496:18:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[Kuint_fast16_t[m[K’
+                  [01;31m[Kuint_fast16_t[m[K const evtSize);
+                  [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K../../../../../../include/qf.h:499:1:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers before ‘[01m[Kint_t[m[K’
+ [01;31m[Kint_t[m[K QF_run(void);
+ [01;31m[K^~~~~[m[K
+[01m[K../../../../../../include/qf.h:562:27:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kconst[m[K’
+     void QF_publish_(QEvt [01;31m[Kconst[m[K * const e);
+                           [01;31m[K^~~~~[m[K
+[01m[K../../../../../../include/qf.h:600:33:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kconst[m[K’
+     void QF_tickX_(uint_fast8_t [01;31m[Kconst[m[K tickRate);
+                                 [01;31m[K^~~~~[m[K
+[01m[K../../../../../../include/qf.h:609:40:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kconst[m[K’
+ bool QF_noTimeEvtsActiveX(uint_fast8_t [01;31m[Kconst[m[K tickRate);
+                                        [01;31m[K^~~~~[m[K
+[01m[K../../../../../../include/qf.h:612:14:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[KQActive[m[K’
+ void QF_add_([01;31m[KQActive[m[K * const a);
+              [01;31m[K^~~~~~~[m[K
+[01m[K../../../../../../include/qf.h:615:25:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kconst[m[K’
+ void QF_remove_(QActive [01;31m[Kconst[m[K * const a);
+                         [01;31m[K^~~~~[m[K
+[01m[K../../../../../../include/qf.h:618:1:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers before ‘[01m[Kuint_fast16_t[m[K’
+ [01;31m[Kuint_fast16_t[m[K QF_getPoolMin(uint_fast8_t const poolId);
+ [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K../../../../../../include/qf.h:622:1:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers before ‘[01m[Kuint_fast16_t[m[K’
+ [01;31m[Kuint_fast16_t[m[K QF_getQueueMin(uint_fast8_t const prio);
+ [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K../../../../../../include/qf.h:625:1:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers before ‘[01m[KQEvt[m[K’
+ [01;31m[KQEvt[m[K *QF_newX_(uint_fast16_t const evtSize,
+ [01;31m[K^~~~[m[K
+[01m[K../../../../../../include/qf.h:675:17:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kconst[m[K’
+ void QF_gc(QEvt [01;31m[Kconst[m[K * const e);
+                 [01;31m[K^~~~~[m[K
+[01m[K../../../../../../include/qf.h:678:35:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[Kuint_fast16_t[m[K’
+ void QF_bzero(void * const start, [01;31m[Kuint_fast16_t[m[K len);
+                                   [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K../../../../../../include/qf.h:702:16:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K=[m[K’, ‘[01m[K,[m[K’, ‘[01m[K;[m[K’, ‘[01m[Kasm[m[K’ or ‘[01m[K__attribute__[m[K’ before ‘[01m[Kconst[m[K’
+ extern uint8_t [01;31m[Kconst[m[K Q_ROM QF_pwr2Lkup[65];
+                [01;31m[K^~~~~[m[K
+[01m[K../../../../../../include/qf.h:709:16:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K=[m[K’, ‘[01m[K,[m[K’, ‘[01m[K;[m[K’, ‘[01m[Kasm[m[K’ or ‘[01m[K__attribute__[m[K’ before ‘[01m[Kconst[m[K’
+ extern uint8_t [01;31m[Kconst[m[K Q_ROM QF_invPwr2Lkup[65];
+                [01;31m[K^~~~~[m[K
+[01m[K../../../../../../include/qf.h:715:16:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K=[m[K’, ‘[01m[K,[m[K’, ‘[01m[K;[m[K’, ‘[01m[Kasm[m[K’ or ‘[01m[K__attribute__[m[K’ before ‘[01m[Kconst[m[K’
+ extern uint8_t [01;31m[Kconst[m[K Q_ROM QF_div8Lkup[65];
+                [01;31m[K^~~~~[m[K
+[01m[K../../../../../../include/qf.h:738:20:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K=[m[K’, ‘[01m[K,[m[K’, ‘[01m[K;[m[K’, ‘[01m[Kasm[m[K’ or ‘[01m[K__attribute__[m[K’ before ‘[01m[Kconst[m[K’
+     extern uint8_t [01;31m[Kconst[m[K Q_ROM QF_log2Lkup[256];
+                    [01;31m[K^~~~~[m[K
+[01m[K../../../../../../include/qf.h:747:16:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K=[m[K’, ‘[01m[K,[m[K’, ‘[01m[K;[m[K’, ‘[01m[Kasm[m[K’ or ‘[01m[K__attribute__[m[K’ before ‘[01m[K*[m[K’ token
+ extern QActive [01;31m[K*[m[KQF_active_[QF_MAX_ACTIVE + 1];
+                [01;31m[K^[m[K
+In file included from [01m[K../../../../../../include/qp_port.h:55:0[m[K,
+                 from [01m[Kbsp.c:35[m[K:
+[01m[K../../../../../../include/qassert.h:231:24:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kconst[m[K’
+ void Q_onAssert(char_t [01;31m[Kconst[m[K Q_ROM * const file, int_t line);
+                        [01;31m[K^~~~~[m[K
+In file included from [01m[Kbsp.c:35:0[m[K:
+[01m[K../../../../../../include/qp_port.h:150:14:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K=[m[K’, ‘[01m[K,[m[K’, ‘[01m[K;[m[K’, ‘[01m[Kasm[m[K’ or ‘[01m[K__attribute__[m[K’ before ‘[01m[KQEvent[m[K’
+ typedef QEvt [01;31m[KQEvent[m[K;
+              [01;31m[K^~~~~~[m[K
+In file included from [01m[Kbsp.c:36:0[m[K:
+[01m[Kgame.h:38:1:[m[K [01;35m[Kwarning: [m[Kempty declaration
+ [01;35m[Kenum[m[K GameSignals {                              /* signals used in the game */
+ [01;35m[K^~~~[m[K
+[01m[Kgame.h:71:5:[m[K [01;31m[Kerror: [m[Kexpected specifier-qualifier-list before ‘[01m[KQEvt[m[K’
+     [01;31m[KQEvt[m[K super;                                /* extend the QEvt class */
+     [01;31m[K^~~~[m[K
+[01m[Kgame.h:74:3:[m[K [01;31m[Kerror: [m[Kstorage class specified for parameter ‘[01m[KObjectPosEvt[m[K’
+ } [01;31m[KObjectPosEvt[m[K;
+   [01;31m[K^~~~~~~~~~~~[m[K
+[01m[Kgame.h:77:5:[m[K [01;31m[Kerror: [m[Kexpected specifier-qualifier-list before ‘[01m[KQEvt[m[K’
+     [01;31m[KQEvt[m[K super;                                /* extend the QEvt class */
+     [01;31m[K^~~~[m[K
+[01m[Kgame.h:81:3:[m[K [01;31m[Kerror: [m[Kstorage class specified for parameter ‘[01m[KObjectImageEvt[m[K’
+ } [01;31m[KObjectImageEvt[m[K;
+   [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[Kgame.h:84:5:[m[K [01;31m[Kerror: [m[Kexpected specifier-qualifier-list before ‘[01m[KQEvt[m[K’
+     [01;31m[KQEvt[m[K super;                                /* extend the QEvt class */
+     [01;31m[K^~~~[m[K
+[01m[Kgame.h:86:3:[m[K [01;31m[Kerror: [m[Kstorage class specified for parameter ‘[01m[KMineEvt[m[K’
+ } [01;31m[KMineEvt[m[K;
+   [01;31m[K^~~~~~~[m[K
+[01m[Kgame.h:89:5:[m[K [01;31m[Kerror: [m[Kexpected specifier-qualifier-list before ‘[01m[KQEvt[m[K’
+     [01;31m[KQEvt[m[K super;                                /* extend the QEvt class */
+     [01;31m[K^~~~[m[K
+[01m[Kgame.h:91:3:[m[K [01;31m[Kerror: [m[Kstorage class specified for parameter ‘[01m[KScoreEvt[m[K’
+ } [01;31m[KScoreEvt[m[K;
+   [01;31m[K^~~~~~~~[m[K
+[01m[Kgame.h:102:1:[m[K [01;35m[Kwarning: [m[Kempty declaration
+ [01;35m[Kenum[m[K GameBitmapIds {
+ [01;35m[K^~~~[m[K
+[01m[Kgame.h:122:16:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K=[m[K’, ‘[01m[K,[m[K’, ‘[01m[K;[m[K’, ‘[01m[Kasm[m[K’ or ‘[01m[K__attribute__[m[K’ before ‘[01m[K*[m[K’ token
+ extern QActive [01;31m[K*[m[K const AO_Tunnel;
+                [01;31m[K^[m[K
+[01m[Kgame.h:123:16:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K=[m[K’, ‘[01m[K,[m[K’, ‘[01m[K;[m[K’, ‘[01m[Kasm[m[K’ or ‘[01m[K__attribute__[m[K’ before ‘[01m[K*[m[K’ token
+ extern QActive [01;31m[K*[m[K const AO_Ship;
+                [01;31m[K^[m[K
+[01m[Kgame.h:124:16:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K=[m[K’, ‘[01m[K,[m[K’, ‘[01m[K;[m[K’, ‘[01m[Kasm[m[K’ or ‘[01m[K__attribute__[m[K’ before ‘[01m[K*[m[K’ token
+ extern QActive [01;31m[K*[m[K const AO_Missile;
+                [01;31m[K^[m[K
+[01m[Kgame.h:126:1:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers before ‘[01m[Kuint8_t[m[K’
+ [01;31m[Kuint8_t[m[K do_bitmaps_overlap(uint8_t bmp_id1, uint8_t x1, uint8_t y1,
+ [01;31m[K^~~~~~~[m[K
+[01m[Kgame.h:130:1:[m[K [01;31m[Kerror: [m[Kunknown type name ‘[01m[KQHsm[m[K’
+ [01;31m[KQHsm[m[K *Mine1_ctor(uint8_t id);
+ [01;31m[K^~~~[m[K
+[01m[Kgame.h:130:18:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[Kuint8_t[m[K’
+ QHsm *Mine1_ctor([01;31m[Kuint8_t[m[K id);
+                  [01;31m[K^~~~~~~[m[K
+[01m[Kgame.h:131:1:[m[K [01;31m[Kerror: [m[Kunknown type name ‘[01m[KQHsm[m[K’
+ [01;31m[KQHsm[m[K *Mine2_ctor(uint8_t id);
+ [01;31m[K^~~~[m[K
+[01m[Kgame.h:131:18:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[Kuint8_t[m[K’
+ QHsm *Mine2_ctor([01;31m[Kuint8_t[m[K id);
+                  [01;31m[K^~~~~~~[m[K
+In file included from [01m[Kbsp.c:37:0[m[K:
+[01m[Kbsp.h:36:29:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kconst[m[K’
+ void BSP_drawBitmap(uint8_t [01;31m[Kconst[m[K *bitmap,
+                             [01;31m[K^~~~~[m[K
+[01m[Kbsp.h:39:22:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[Kuint8_t[m[K’
+ void BSP_drawNString([01;31m[Kuint8_t[m[K x,                              /* x in pixels */
+                      [01;31m[K^~~~~~~[m[K
+[01m[Kbsp.h:40:22:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[Kuint8_t[m[K’
+                      [01;31m[Kuint8_t[m[K y,                      /* y position in chars */
+                      [01;31m[K^~~~~~~[m[K
+[01m[Kbsp.h:42:22:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[Kuint16_t[m[K’
+ void BSP_updateScore([01;31m[Kuint16_t[m[K score);
+                      [01;31m[K^~~~~~~~[m[K
+In file included from [01m[Kbsp.c:38:0[m[K:
+[01m[Kvideo.h:32:1:[m[K [01;35m[Kwarning: [m[Kempty declaration
+ [01;35m[Kenum[m[K VideoColor {
+ [01;35m[K^~~~[m[K
+[01m[Kvideo.h:63:24:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[Kuint8_t[m[K’
+ void Video_clearScreen([01;31m[Kuint8_t[m[K bgColor);
+                        [01;31m[K^~~~~~~[m[K
+[01m[Kvideo.h:65:22:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[Kuint8_t[m[K’
+ void Video_clearRect([01;31m[Kuint8_t[m[K x1, uint8_t y1, uint8_t x2, uint8_t y2,
+                      [01;31m[K^~~~~~~[m[K
+[01m[Kvideo.h:65:34:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[Kuint8_t[m[K’
+ void Video_clearRect(uint8_t x1, [01;31m[Kuint8_t[m[K y1, uint8_t x2, uint8_t y2,
+                                  [01;31m[K^~~~~~~[m[K
+[01m[Kvideo.h:65:46:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[Kuint8_t[m[K’
+ void Video_clearRect(uint8_t x1, uint8_t y1, [01;31m[Kuint8_t[m[K x2, uint8_t y2,
+                                              [01;31m[K^~~~~~~[m[K
+[01m[Kvideo.h:65:58:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[Kuint8_t[m[K’
+ void Video_clearRect(uint8_t x1, uint8_t y1, uint8_t x2, [01;31m[Kuint8_t[m[K y2,
+                                                          [01;31m[K^~~~~~~[m[K
+[01m[Kvideo.h:66:22:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[Kuint8_t[m[K’
+                      [01;31m[Kuint8_t[m[K bgColor);
+                      [01;31m[K^~~~~~~[m[K
+[01m[Kvideo.h:68:23:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[Kuint8_t[m[K’
+ void Video_printStrAt([01;31m[Kuint8_t[m[K x, uint8_t y, uint8_t color,
+                       [01;31m[K^~~~~~~[m[K
+[01m[Kvideo.h:68:34:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[Kuint8_t[m[K’
+ void Video_printStrAt(uint8_t x, [01;31m[Kuint8_t[m[K y, uint8_t color,
+                                  [01;31m[K^~~~~~~[m[K
+[01m[Kvideo.h:68:45:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[Kuint8_t[m[K’
+ void Video_printStrAt(uint8_t x, uint8_t y, [01;31m[Kuint8_t[m[K color,
+                                             [01;31m[K^~~~~~~[m[K
+[01m[Kvideo.h:71:23:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[Kuint8_t[m[K’
+ void Video_printNumAt([01;31m[Kuint8_t[m[K x, uint8_t y, uint8_t color, uint32_t num);
+                       [01;31m[K^~~~~~~[m[K
+[01m[Kvideo.h:71:34:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[Kuint8_t[m[K’
+ void Video_printNumAt(uint8_t x, [01;31m[Kuint8_t[m[K y, uint8_t color, uint32_t num);
+                                  [01;31m[K^~~~~~~[m[K
+[01m[Kvideo.h:71:45:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[Kuint8_t[m[K’
+ void Video_printNumAt(uint8_t x, uint8_t y, [01;31m[Kuint8_t[m[K color, uint32_t num);
+                                             [01;31m[K^~~~~~~[m[K
+[01m[Kvideo.h:71:60:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[Kuint32_t[m[K’
+ void Video_printNumAt(uint8_t x, uint8_t y, uint8_t color, [01;31m[Kuint32_t[m[K num);
+                                                            [01;31m[K^~~~~~~~[m[K
+[01m[Kvideo.h:73:25:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[Kuint8_t[m[K’
+ void Video_drawBitmapAt([01;31m[Kuint8_t[m[K x, uint8_t y,
+                         [01;31m[K^~~~~~~[m[K
+[01m[Kvideo.h:73:36:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[Kuint8_t[m[K’
+ void Video_drawBitmapAt(uint8_t x, [01;31m[Kuint8_t[m[K y,
+                                    [01;31m[K^~~~~~~[m[K
+[01m[Kvideo.h:74:25:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[Kuint8_t[m[K’
+                         [01;31m[Kuint8_t[m[K const *bitmap, uint8_t width, uint8_t height);
+                         [01;31m[K^~~~~~~[m[K
+[01m[Kvideo.h:74:48:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[Kuint8_t[m[K’
+                         uint8_t const *bitmap, [01;31m[Kuint8_t[m[K width, uint8_t height);
+                                                [01;31m[K^~~~~~~[m[K
+[01m[Kvideo.h:74:63:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[Kuint8_t[m[K’
+                         uint8_t const *bitmap, uint8_t width, [01;31m[Kuint8_t[m[K height);
+                                                               [01;31m[K^~~~~~~[m[K
+[01m[Kvideo.h:76:25:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[Kuint8_t[m[K’
+ void Video_drawStringAt([01;31m[Kuint8_t[m[K x, uint8_t y, char const *str);
+                         [01;31m[K^~~~~~~[m[K
+[01m[Kvideo.h:76:36:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[Kuint8_t[m[K’
+ void Video_drawStringAt(uint8_t x, [01;31m[Kuint8_t[m[K y, char const *str);
+                                    [01;31m[K^~~~~~~[m[K
+[01m[Kbsp.c:40:79:[m[K [01;31m[Kfatal error: [m[Kdos.h: No such file or directory
+ #include <dos.h>                       /* for _dos_setvect()/_dos_getvect() */[01;31m[K[m[K
+                                                                               [01;31m[K^[m[K
+compilation terminated.
+makefile:8: recipe for target 'bsp.o' failed
+make: *** [bsp.o] Error 1
+]0;usuario@DESKTOP-9EAUVS9: ~/ORGANIZACION_GRUPO3MV11SOTR-2020-1/FLYANDSHOOT/examples/80x86/dos/watcom/l/game[01;32musuario@DESKTOP-9EAUVS9[00m:[01;34m~/ORGANIZACION_GRUPO3MV11SOTR-2020-1/FLYANDSHOOT/examples/80x86/ddos/watcom/l/game[00m$ exit
+
+Script done on Wed 06 Nov 2019 05:20:20 PM CST

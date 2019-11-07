@@ -55,7 +55,11 @@
 } while (0)
 
 
-#include <i86.h>                                /* for _disable()/_enable() */
+//#include <i86.h>                                /* for _disable()/_enable() */
+#include <types.h>
+#include <x86.h>
+#define _disable	cli
+#define _enable		sti
 
 #include "qep_port.h"                                           /* QEP port */
 #include "qvanilla.h"                   /* The "Vanilla" cooperative kernel */
