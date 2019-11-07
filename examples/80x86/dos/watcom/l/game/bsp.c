@@ -43,7 +43,7 @@
 #else
 typedef void (*ISR_fn)();
 ISR_fn _dos_getvect(unsigned int);
-ISR_fn _dos_setvect(unsigned int,void (*)());
+void _dos_setvect(unsigned int,void (*)());
 #define inp	inb
 #define outp	outb
 #endif /*LMC_TEST_2020_1*/
