@@ -1,3 +1,5 @@
+OBJECTS:=bsp.o mine1.o mine2.o missile.o ship.o tunnel.o \
+video.o
 CFLAGS +=-I../../../../../../include/
 CFLAGS +=-I../../../../../../ports/80x86/dos/watcom/l/
 #CFLAGS +=-I../../../../../../WATCOM/h/
@@ -5,8 +7,9 @@ CFLAGS +=-I../../../../../../ports/80x86/dos/watcom/l/
 CFLAGS +=-DLMC_TEST_2020_1
 CFLAGS +=-I../../../../../../xv6/
 CC=gcc
-all:bsp.o
-bsp.o:bsp.c
-	$(CC) $(CFLAGS) -c $<
+#all:bsp.o
+all:$(OBJECTS)
+#bsp.o:bsp.c
+#	$(CC) $(CFLAGS) -c $<
 clean:
 	rm -v *.o
