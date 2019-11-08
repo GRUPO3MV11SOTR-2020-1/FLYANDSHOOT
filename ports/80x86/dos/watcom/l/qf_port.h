@@ -55,11 +55,14 @@
 } while (0)
 
 
-//#include <i86.h>                                /* for _disable()/_enable() */
+#ifndef LMC_TEST_2020_1
+#include <i86.h>                                /* for _disable()/_enable() */
+#else
 #include <types.h>
 #include <x86.h>
 #define _disable	cli
 #define _enable		sti
+#endif /*LMC_TEST_2020_1*/
 
 #include "qep_port.h"                                           /* QEP port */
 #include "qvanilla.h"                   /* The "Vanilla" cooperative kernel */
