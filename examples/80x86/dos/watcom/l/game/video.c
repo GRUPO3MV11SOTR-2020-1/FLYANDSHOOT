@@ -28,7 +28,11 @@
 #include "qp_port.h"
 #include "video.h"
 
+#ifndef LMC_TEST_2020_1
 #include <conio.h>
+#else
+#define MK_FP(video_base,uint16_t__et_al) NULL	/*homework:review file conio.h*/
+#endif /*LMC_TEST_2020_1*/
 #include <stdlib.h>
 
 #define VIDEO_BASE   0xB800
@@ -44,12 +48,21 @@ void Video_clearScreen(uint8_t bgColor) {
 void Video_clearRect(uint8_t x1, uint8_t y1, uint8_t x2, uint8_t y2,
                      uint8_t bgColor)
 {
+#ifndef LMC_TEST_2020_1
     uint8_t far *pscrX = (uint8_t far *)MK_FP(VIDEO_BASE,
                                    (uint16_t)(((y1 * VIDEO_WIDTH) + x1) * 2));
+#else
+    uint8_t *pscrX = (uint8_t *)MK_FP(VIDEO_BASE,
+                                   (uint16_t)(((y1 * VIDEO_WIDTH) + x1) * 2));
+#endif /*LMC_TEST_2020_1*/
     x2 -= x1;
     y2 -= y1;
     for (x1 = 0; x1 < x2; ++x1, pscrX += 2) {                /* loop over x */
+#ifndef LMC_TEST_2020_1
         uint8_t far *pscrXY = pscrX;
+#else
+        uint8_t *pscrXY = pscrX;
+#endif /*LMC_TEST_2020_1*/
         for (y1 = 0; y1 < y2; ++y1, pscrXY += 2*VIDEO_WIDTH) {
             pscrXY[0] = 0x20;                     /* Put space in video RAM */
             pscrXY[1] = bgColor;        /* Put video attribute in video RAM */
@@ -61,8 +74,13 @@ void Video_printStrAt(uint8_t x, uint8_t y, uint8_t color,
                       char const *str)
 {
                                /* calculate position on the video RAM (VGA) */
+#ifndef LMC_TEST_2020_1
     uint8_t far *pscr = (uint8_t far *)MK_FP(VIDEO_BASE,
                                      (uint16_t)(((y * VIDEO_WIDTH) + x) * 2));
+#else
+    uint8_t *pscr = (uint8_t *)MK_FP(VIDEO_BASE,
+                                     (uint16_t)(((y * VIDEO_WIDTH) + x) * 2));
+#endif /*LMC_TEST_2020_1*/
     while (*str != (uint8_t)0) {
         pscr[0] = *str++;                     /* Put character in video RAM */
         pscr[1] &= ~0x0F;                     /* clear the foreground color */
