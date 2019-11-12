@@ -31,6 +31,8 @@
 #ifndef LMC_TEST_2020_1
 #include <conio.h>
 #else
+#define far
+
 #define MK_FP(video_base,uint16_t__et_al) NULL	/*homework:review file conio.h*/
 #endif /*LMC_TEST_2020_1*/
 #include <stdlib.h>

@@ -1,5 +1,5 @@
 OBJECTS:=bsp.o mine1.o mine2.o missile.o ship.o tunnel.o \
-video.o
+video.o main.o
 CFLAGS +=-I../../../../../../include/
 CFLAGS +=-I../../../../../../ports/80x86/dos/watcom/l/
 #CFLAGS +=-I../../../../../../WATCOM/h/
